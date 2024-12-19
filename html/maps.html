@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Maps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/nav.js" defer></script>
+
+</head>
+
+<body class="bg-gray-900 text-white font-sans" style="background-image: url('../img/maps.jpg'); background-attachment: fixed; background-size: cover; background-position: center;">
+
+    <!-- Contenedor Principal -->
+    <main class="bg-gray-800 rounded-xl p-6 sm:p-8 md:p-2 max-w-full sm:max-w-screen-xl mx-auto my-6 sm:my-10 shadow-xl">
+        <h1 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-yellow-400 text-center">Maps</h1>
+
+        <!-- Contenedor de mapas -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+            <!-- Lista de mapas -->
+            <article id="maps-container" class="col-span-1 bg-gray-900 p-6 rounded-xl shadow-lg sm:grid-cols-2">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-yellow-400 text-center">Maps List</h2>
+                <ul id="maps-list" class="space-y-4">
+                    <!-- Los mapas se insertarán aquí dinámicamente -->
+                </ul>
+            </article>
+
+            <!-- Detalles del mapa -->
+            <article class="col-span-1 sm:col-span-2 bg-gray-900 p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-yellow-400 text-center" id="map-name">Select a Map</h2>
+
+                <!-- Imagen del mapa -->
+                <div id="map-image-container" class="mb-4 sm:mb-6 flex justify-center">
+                    <img id="default-map-image" src="../img/allMaps.jpg" alt="Default Map Image" class="w-full h-auto rounded-xl shadow-lg">
+                    <img id="map-image" src="" alt="Map Full Image" class="w-full h-auto rounded-xl shadow-lg hidden">
+                </div>
+
+                <!-- Imagen de displayIcon -->
+                <div id="map-icon-container" class="mb-4 sm:mb-6 flex justify-center">
+                    <img id="map-display-icon" src="" alt="Map Icon" class="hover:scale-110 w-32 h-32 object-cover rounded-full shadow-lg hidden">
+                </div>
+
+                <!-- Descripción del mapa -->
+                <p id="default-map-description" class="text-gray-300 text-sm sm:text-lg mb-4 sm:mb-6 px-4 leading-relaxed">
+                    <strong>Standard Maps:</strong> Designed for the main game modes like Bomb Defusal (Plant/Defuse). They feature two bomb sites (A and B), spawn areas for each team, and various obstacles and pathways. Examples include Bind, Split, Ascent, Icebox, and Breeze.<br><br>
+                    <strong>Team Deathmatch Maps:</strong> These maps are specifically created for the Team Deathmatch mode. They often have different layouts compared to standard maps, designed to facilitate fast-paced, close-quarters combat.<br><br>
+                    <strong>Practice Maps:</strong> These are built to help new players learn the game mechanics and practice their skills. "The Range" is a notable example, offering various training scenarios.<br><br>
+                    Each map has unique features, such as teleporters in Bind, multiple bomb sites in Haven, or interactive doors in Ascent. Understanding these elements is key to devising effective strategies and improving your gameplay.
+                </p>
+
+                <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-yellow-400">Map Features</h3>
+                <!-- Información adicional del mapa -->
+                <div id="callouts-list" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Las callouts se insertarán aquí dinámicamente -->
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="../js/theme-toggle.js"></script>
+    <script src="../js/maps.js"></script>
+</body>
+
+</html>

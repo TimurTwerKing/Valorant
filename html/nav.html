@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Navegación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white">
+
+  <nav class="bg-gray-300 dark:bg-gray-900 p-4 shadow-md flex justify-between items-center">
+    <ul class="flex flex-wrap sm:flex-nowrap space-x-4 sm:space-x-6">
+      <li><a href="index.html" class="text-gray-900 dark:text-white hover:text-yellow-300 px-3 py-2 rounded-md">Main</a></li>
+      <li><a href="agents.html" class="text-gray-900 dark:text-white hover:text-yellow-300 px-3 py-2 rounded-md">Agents</a></li>
+      <li><a href="maps.html" class="text-gray-900 dark:text-white hover:text-yellow-300 px-3 py-2 rounded-md">Maps</a></li>
+      <li><a href="weapons.html" class="text-gray-900 dark:text-white hover:text-yellow-300 px-3 py-2 rounded-md">Weapons</a></li>
+    </ul>
+
+    <!-- Botón de tema claro/oscuro -->
+    <button id="theme-toggle" class="text-gray-900 dark:text-white">
+      🌓
+    </button>
+</nav>
+
+
+  <script src="../js/theme-toggle.js"></script>
+</body>
+</html>

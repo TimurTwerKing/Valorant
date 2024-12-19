@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Agents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/nav.js" defer></script>
+
+</head>
+
+<body class="bg-gray-900 text-white font-sans" style="background-image: url('../img/agents.jpg'); 
+             background-attachment: fixed; 
+             background-size: cover; 
+             background-position: center;">
+
+    <!-- Contenedor Principal -->
+    <main class="bg-gray-800 rounded-xl p-6 sm:p-8 max-w-full sm:max-w-screen-xl mx-auto my-6 sm:my-10 shadow-xl">
+        <h1 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-red-500 text-center">Agents</h1>
+
+        <!-- Contenedor de agentes -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Lista de agentes -->
+            <article id="agents-container" class="col-span-1 bg-gray-900 p-6 rounded-xl shadow-lg sm:col-span-2 md:col-span-1">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-red-500 text-center">Agents List</h2>
+                <ul id="agents-list" class="space-y-4">
+                    <!-- Los agentes se insertarán aquí dinámicamente -->
+                </ul>
+            </article>
+
+            <!-- Detalles del agente -->
+            <article class="col-span-1 sm:col-span-2 bg-gray-900 p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-red-500 text-center" id="agent-name">Select an Agent</h2>
+
+                <!-- Imagen del agente -->
+                <div id="agent-image-container" class="mb-4 sm:mb-6 flex justify-center">
+                    <img id="default-image" src="../img/allAgents.jpg" alt="Default Agent Image"
+                        class="w-full sm:w-3/4 h-auto rounded-xl shadow-lg">
+                    <img id="agent-image" src="" alt="Agent Full Image"
+                        class="w-full sm:w-3/4 h-auto rounded-xl shadow-lg hidden">
+                </div>
+
+                <!-- Título de Habilidades -->
+                <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-red-500 text-center">Abilities</h3>
+                <!-- Descripción del agente -->
+                <p id="default-description" class="text-gray-300 text-sm sm:text-base mb-6 px-4 leading-relaxed">
+                    <strong>Duelists</strong><br>
+                    Jett: Agile and quick, uses wind to her advantage with abilities to dash and jump.<br>
+                    Phoenix: Uses fire-based abilities to heal himself and damage enemies.<br>
+                    Raze: High explosive damage with grenades, rockets, and a robot that tracks enemies.<br>
+                    Reyna: Gains health and invisibility by consuming soul orbs from fallen enemies.<br>
+                    Yoru: Uses deception and stealth to outmaneuver opponents with teleportation and invisibility.<br><br>
+
+                    <strong>Controllers</strong><br>
+                    Brimstone: Tactical with smokescreens, incendiary grenades, and orbital strikes.<br>
+                    Viper: Controls areas with toxic gas and poison clouds.<br>
+                    Omen: Uses shadows to blind, teleport, and deceive enemies.<br>
+                    Astra: Cosmic abilities to manipulate battlefields with stars that grant smokes, stuns, and gravity wells.<br>
+                    Harbor: Water-based abilities that create barriers and push enemies back.<br><br>
+
+                    <strong>Initiators</strong><br>
+                    Breach: Heavy crowd control with abilities that stun and disorient enemies through walls.<br>
+                    Sova: Hunter who uses recon drones and arrows to locate and eliminate enemies.<br>
+                    Skye: Uses nature-themed abilities to heal allies and reveal enemies.<br>
+                    KAY/O: Robot who can suppress enemy abilities and flash or frag with grenades.<br>
+                    Fade: Utilizes darkness to trap, track, and terrify enemies with shadow-like abilities.<br><br>
+
+                    <strong>Sentinels</strong><br>
+                    Sage: Healer who can revive teammates, slow enemies, and block paths with walls.<br>
+                    Cypher: Information gatherer who uses cameras, traps, and wires to control the battlefield.<br>
+                    Killjoy: Engineer who uses turrets, grenades, and lockdown devices to control the map.<br>
+                    Chamber: Deadly marksman with teleportation and powerful weapons to secure areas.
+                </p>
+
+                <p id="agent-description" class="text-gray-300 text-sm sm:text-base mb-6 px-4 leading-relaxed hidden">
+                    Select an agent to see their description here.
+                </p>
+                <!-- Lista de habilidades -->
+                <div id="abilities-list" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Las habilidades se insertarán aquí dinámicamente -->
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="../js/agents.js" defer></script>
+</body>
+
+</html>
