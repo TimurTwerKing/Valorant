@@ -6,56 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valorant Weapons</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'selector'
+        }
+    </script>
     <script src="../js/nav.js" defer></script>
-
 </head>
 
-<body class="bg-gray-900 text-white font-sans" style="background-image: url('../img/weapons.png'); background-attachment: fixed;">
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans 
+bg-[url('../img/weapons-light.png')] dark:bg-[url('../img/weapons.png')] bg-cover bg-center"
+    style="background-attachment: fixed;">
 
-    <!-- Contenedor Principal -->
-    <main class="bg-gray-800 rounded-xl p-6 sm:p-8 md:p-2 max-w-full sm:max-w-screen-xl mx-auto my-6 sm:my-10 shadow-xl">
-        <h1 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-teal-300 text-center">Weapons</h1>
+    <div id="nav-snippet"></div>
 
-        <!-- Contenedor de armas -->
+    <main
+        class="bg-gray-100/70 dark:bg-gray-800/70 rounded-xl p-6 sm:p-8 max-w-full sm:max-w-screen-xl mx-auto my-6 sm:my-10 shadow-xl">
+        <h1 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-teal-500 dark:text-teal-300 text-center">Weapons
+        </h1>
         <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-            <!-- Lista de armas -->
-            <article id="weapons-container" class="col-span-1 bg-gray-900 p-6 rounded-xl shadow-lg sm:grid-cols-2">
-                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-teal-300 text-center">Weapons List</h2>
-                <ul id="weapons-list" class="space-y-4">
-                    <!-- Las armas se insertarán aquí dinámicamente -->
-                </ul>
+            <article id="weapons-container"
+                class="col-span-1 bg-gray-50 dark:bg-gray-900 p-6 rounded-xl shadow-lg sm:grid-cols-2">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-teal-500 dark:text-teal-300 text-center">
+                    Weapons List</h2>
+                <ul id="weapons-list" class="space-y-4"></ul>
             </article>
-
-
-            <!-- Detalles del arma -->
-            <article class="col-span-1 sm:col-span-2 bg-gray-900 p-6 rounded-xl shadow-lg">
-                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-teal-300 text-center" id="weapon-name">Select a Weapon</h2>
-
+            <article class="col-span-1 sm:col-span-2 bg-gray-50 dark:bg-gray-900 p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-teal-500 dark:text-teal-300 text-center"
+                    id="weapon-name">Select a Weapon</h2>
                 <div id="video-container" class="mb-4 sm:mb-6">
-                    <img id="default-image" src="../img/valoratWeapons.png" alt="Default Weapon Image" class="w-full h-auto rounded-xl shadow-lg">
-                    <iframe id="weapon-video" src="" class="w-full h-64 rounded-xl shadow-lg hidden"></iframe>
+                    <img id="default-image" src="../img/valoratWeapons.png" alt="Default Weapon Image"
+                        class="w-full h-auto rounded-xl shadow-lg">
+                    <video id="weapon-video" class="hidden w-full h-auto rounded-xl shadow-lg" autoplay muted
+                        loop></video>
                 </div>
-
-                <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-teal-300 text-center">Specifications</h3>
-                
-                <ul id="weapon-specs" class="list-disc list-inside text-sm sm:text-base text-gray-400 grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <li><strong>Pistols:</strong> Classic, Sheriff, Ghost, Frenzy, Shorty</li>
-                    <li><strong>SMGs:</strong> Spectre, Stinger</li>
-                    <li><strong>Rifles:</strong> Vandal, Phantom, Guardian, Bulldog</li>
-                    <li><strong>Sniper Rifles:</strong> Operator, Marshal</li>
-                    <li><strong>Shotguns:</strong> Judge, Bucky</li>
-                    <li><strong>Machine Guns:</strong> Odin, Ares</li>
+                <ul id="weapon-specs"
+                    class="list-disc list-inside text-sm sm:text-base text-gray-700 dark:text-gray-300 grid grid-cols-1 md:grid-cols-2 gap-4">
                 </ul>
-
-                <h2 id="skins-section" class="text-3xl font-bold mb-6 text-teal-300 text-center hidden py-4">Skins</h2>
-                <div id="weapon-skins" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    <!-- Las skins se generarán aquí dinámicamente -->
-                </div>
+                <section id="skins-section" class="hidden">
+                    <h3 class="text-xl font-bold mt-6 text-teal-500 dark:text-teal-300">Available Skins</h3>
+                    <div id="weapon-skins" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4"></div>
+                </section>
             </article>
         </section>
     </main>
 
-    <script src="../js/weapons.js" defer></script>
+    <script src="../js/weapons.js"></script>
 </body>
 
 </html>

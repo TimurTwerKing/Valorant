@@ -1,47 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CounterStrike LGTBQ+</title>
+    <title>CounterS  trike LGTBQ+</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'selector'
+        }
+    </script>
     <script src="../js/nav.js" defer></script>
-
-    
 </head>
 
-<body class="bg-gray-800 bg-contain bg-no-repeat bg-center"
-    style="background-image: url('../img/background.jpeg'); background-attachment: fixed;">
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans bg-[url('../img/main-white.png')] dark:bg-[url('../img/main-dark.png')]"
+    style="background-attachment: fixed; background-size: cover; background-position: center;">
 
-    <h1 class="text-black text-xl px-4 py-2 sm:px-8 sm:text-2xl">Counter-Strike LGTBQ+</h1>
 
-    <div class="text-black text-base px-4 py-4 sm:px-16 sm:py-6 max-w-screen-sm sm:max-w-screen-md ml-0">
-        <h2 class="mb-4">
+
+    <div id="nav-snippet"></div>
+
+    <h1 class="text-center text-4xl font-extrabold text-indigo-600 dark:text-pink-400 py-8">
+        Counter-Strike LGTBQ+
+    </h1>
+
+    <div class="bg-gray-50/90 dark:bg-gray-800/90 px-20 py-8 rounded-lg shadow-lg max-w-3xl mx-auto">
+        <h2 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
             ¡Bienvenid@ a Valorant, el espacio perfecto para descubrir y explorar el fascinante universo
             de este juego que tanto nos apasiona! 🌟
         </h2>
 
-        <h2 class="mb-4">
+        <h2 class="mb-4 text-gray-700 dark:text-gray-300">
             Aquí podrás sumergirte en:
-            🎭 Personajes: Aprende todo sobre sus historias, habilidades, y curiosidades, destacando aquellos que rompen
-            barreras y representan la diversidad. 🌈
-            🗺️ Mapas: Explora los rincones más emblemáticos del juego, con datos detallados que harán que los disfrutes
-            aún más.
-            🔫 Armas: Descubre estadísticas, diseños y cómo sacarles el máximo potencial.
         </h2>
 
-        <h2 class="mb-4">
-            En nuestra comunidad, la representación LGBTQ+ tiene un lugar especial. Celebramos la inclusión y
-            visibilizamos a los personajes y elementos que hacen de este juego un espacio más diverso y auténtico para
-            tod@s. Porque aquí, cada historia cuenta, y cada jugador tiene un lugar. 💖🏳️‍🌈
-        </h2>
+        <ul class="list-disc ml-6 mb-4">
+            <li class="text-gray-800 dark:text-gray-200">
+                🎭 <span class="font-semibold">Personajes:</span> Aprende sobre sus historias, habilidades y curiosidades.
+            </li>
+            <li class="text-gray-800 dark:text-gray-200">
+                🗺️ <span class="font-semibold">Mapas:</span> Explora los rincones más emblemáticos del juego.
+            </li>
+            <li class="text-gray-800 dark:text-gray-200">
+                🔫 <span class="font-semibold">Armas:</span> Descubre estadísticas, diseños y estrategias.
+            </li>
+        </ul>
 
-        <h2 class="mb-4">
+        <p class="mb-4 text-gray-700 dark:text-gray-300">
+            En nuestra comunidad, la representación LGBTQ+ tiene un lugar especial.
+            Celebramos la inclusión y visibilizamos a los personajes y elementos que hacen de este juego un espacio más
+            diverso.
+        </p>
+
+        <p class="text-center font-bold text-blue-500 dark:text-pink-400">
             ¡Prepárate para una experiencia épica! 🚀
-            ¿List@ para comenzar? 🎮✨
-        </h2>
+        </p>
     </div>
-</body>
+</body> 
 
 </html>
